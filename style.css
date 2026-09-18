@@ -132,26 +132,30 @@ body {
     padding: 30px;
 }
 
-/* Bal kártya tartalom */
+/* Bal kártya (Lecicsinyítve a kérésed szerint) */
+.status-card {
+    padding: 20px; /* Kisebb belső margó */
+}
+
 .card-logo-area {
     text-align: center;
 }
 
 .card-logo {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 32px;  /* Kisebb logó */
+    height: 32px;
+    margin-bottom: 6px;
 }
 
 .card-logo-area h2 {
-    font-size: 20px;
+    font-size: 16px; /* Kisebb cím */
     font-weight: 700;
 }
 
 .divider {
     height: 1px;
     background-color: #1e293b;
-    margin: 20px 0;
+    margin: 12px 0; /* Kisebb térköz */
 }
 
 .player-count {
@@ -160,19 +164,19 @@ body {
 
 .player-count .number {
     display: block;
-    font-size: 42px;
+    font-size: 32px; /* Kisebb szám */
     font-weight: 800;
     color: #00c853;
 }
 
 .player-count .label {
-    font-size: 14px;
+    font-size: 12px; /* Kisebb szöveg */
     color: #94a3b8;
 }
 
 .card-buttons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .social-btn {
@@ -180,10 +184,10 @@ body {
     background-color: #1a2638;
     color: #94a3b8;
     text-decoration: none;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 8px 10px; /* Kisebb gomb magasság */
+    border-radius: 6px;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px; /* Kisebb betűméret a gombon */
     font-weight: 600;
     border: 1px solid #243044;
     transition: 0.2s;
@@ -217,7 +221,7 @@ body {
 
 /* Hírek szekció */
 .news-section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .news-section h2 {
@@ -230,16 +234,16 @@ body {
     background-color: #121c2e;
     border: 1px solid #1e293b;
     border-radius: 12px;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     color: #64748b;
     font-size: 15px;
 }
 
-/* Lábléc közösségi ikonok */
+/* Lábléc / Ikonok feljebb tolva */
 .footer {
     text-align: center;
-    padding: 30px;
+    padding: 15px 30px 30px 30px;
     border-top: 1px solid #121c2e;
 }
 
@@ -247,11 +251,12 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-bottom: 15px; /* Feljebb hozza az ikonokat a szövegtől */
 }
 
 .footer-icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-color: #121c2e;
     border: 1px solid #1e293b;
     border-radius: 50%;
@@ -260,12 +265,23 @@ body {
     justify-content: center;
     color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     transition: 0.2s;
 }
 
 .footer-icon:hover {
     background-color: #1a2638;
+}
+
+.footer-bottom-text p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+.footer-bottom-text a {
+    color: #00e676;
+    text-decoration: none;
 }
 
 /* Reszponzivitás mobilon */
