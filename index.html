@@ -20,7 +20,8 @@
             <span class="logo-text">GUIDMTA</span>
         </div>
         <nav class="nav-links">
-            <a href="#" class="active">Hírek</a>
+            <!-- ITT MÓDOSÍTVA: Rákattintva odagurul a hírekhez -->
+            <a href="#hirek" class="active">Hírek</a>
             <a href="#kozosseg">Közösség</a>
             <a href="https://mtasa.com/" target="_blank" class="btn-download">MTA:SA letöltése</a>
         </nav>
@@ -45,7 +46,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="player-count">
-                    <!-- Itt fogja mutatni a valós játékosszámot -->
+                    <!-- Valós játékosszám ID -->
                     <span class="number" id="player-count">0</span>
                     <span class="label">Online játékos</span>
                 </div>
@@ -72,8 +73,8 @@
             </div>
         </section>
 
-        <!-- Hírek Szekció -->
-        <section class="news-section">
+        <!-- Hírek Szekció (ID-val ellátva az ugráshoz) -->
+        <section class="news-section" id="hirek">
             <h2>Hírek</h2>
             <div class="news-box">
                 <p>Hírek betöltése...</p>
@@ -93,7 +94,7 @@
         </div>
     </footer>
 
-    <!-- JÁTÉKOSSZÁM LEKÉRDEZŐ SCRIPT (A megadott IP-vel) -->
+    <!-- JÁTÉKOSSZÁM LEKÉRDEZŐ SCRIPT -->
     <script>
         const serverIp = '212.73.137.40'; 
         const serverPort = 22206; 
@@ -110,7 +111,6 @@
             }
         }
 
-        // Automatikus lekérdezés bekapcsolva (60 másodpercenként frissül)
         updatePlayerCount();
         setInterval(updatePlayerCount, 60000);
     </script>
