@@ -45,7 +45,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="player-count">
-                    <!-- ITT VAN BEÁLLÍTVA AZ ID A JÁTÉKOSSZÁMHOZ -->
+                    <!-- Itt fogja mutatni a valós játékosszámot -->
                     <span class="number" id="player-count">0</span>
                     <span class="label">Online játékos</span>
                 </div>
@@ -93,27 +93,26 @@
         </div>
     </footer>
 
-    <!-- JÁTÉKOSSZÁM LEKÉRDEZŐ SCRIPT -->
+    <!-- JÁTÉKOSSZÁM LEKÉRDEZŐ SCRIPT (A megadott IP-vel) -->
     <script>
-        // IDE KELL MAJD MEGADNOD A SZERVERED ADATAIT, AMIKOR MÁR ELÉRHETŐ LEGYEN:
-        const serverIp = 'IDE_JÖN_A_SZERVER_IP_CÍME'; 
-        const serverPort = 22003; // Az MTA portod (alapértelmezett a 22003)
+        const serverIp = '212.73.137.40'; 
+        const serverPort = 22206; 
 
         async function updatePlayerCount() {
             try {
-                // Ingyenes nyilvános MTA/GameDig API használata a szerver státusz lekérdezésére
                 let response = await fetch(`https://api.gametracker.rs/api/v1/server/info/${serverIp}:${serverPort}`);
-                // Vagy használhatsz más ingyenes API-t is, pl. mta-status szolgáltatásokat.
-                // Ha elindul a szerver és pontos IP-d lesz, segítek pontosítani ezt a részt!
+                let data = await response.json();
+                if(data && data.players) {
+                    document.getElementById('player-count').innerText = data.players;
+                }
             } catch (error) {
-                // Ha offline a szerver vagy hiba van, 0-át mutat
                 document.getElementById('player-count').innerText = '0';
             }
         }
 
-        // Oldal betöltésekor lefut, majd percenként frissül
-        // updatePlayerCount();
-        // setInterval(updatePlayerCount, 60000);
+        // Automatikus lekérdezés bekapcsolva (60 másodpercenként frissül)
+        updatePlayerCount();
+        setInterval(updatePlayerCount, 60000);
     </script>
 
 </body>
