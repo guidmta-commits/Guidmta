@@ -66,9 +66,9 @@ body {
     font-weight: 700 !important;
 }
 
-/* Fő konténer - keskenyebb, hogy ne legyen túl széles */
+/* Fő konténer - Visszaállítva szélesre, mint az első képen */
 .main-container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     width: 100%;
     padding: 20px;
@@ -117,13 +117,12 @@ body {
     background-color: #00b047;
 }
 
-/* Kártyák elrendezése - kompaktabb méretek */
+/* Kártyák elrendezése - Visszaállítva az eredeti széles arányra */
 .cards-section {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 30px;
     margin-bottom: 50px;
-    justify-content: center;
 }
 
 .card {
@@ -133,7 +132,7 @@ body {
     padding: 30px;
 }
 
-/* Bal kártya (Lecicsinyítve) */
+/* Bal kártya (Kicsi maradt, de a doboza szélesebb) */
 .status-card {
     padding: 20px;
 }
