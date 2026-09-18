@@ -20,9 +20,9 @@
             <span class="logo-text">GUIDMTA</span>
         </div>
         <nav class="nav-links">
-            <!-- ITT MÓDOSÍTVA: Rákattintva odagurul a hírekhez -->
-            <a href="#hirek" class="active">Hírek</a>
-            <a href="#kozosseg">Közösség</a>
+            <a href="#hirek">Hírek</a>
+            <!-- ITT MÓDOSÍTVA: A Közösség gomb a legeslegaljára ugrik -->
+            <a href="#kozosseg" class="active">Közösség</a>
             <a href="https://mtasa.com/" target="_blank" class="btn-download">MTA:SA letöltése</a>
         </nav>
     </header>
@@ -73,7 +73,7 @@
             </div>
         </section>
 
-        <!-- Hírek Szekció (ID-val ellátva az ugráshoz) -->
+        <!-- Hírek Szekció -->
         <section class="news-section" id="hirek">
             <h2>Hírek</h2>
             <div class="news-box">
@@ -82,8 +82,8 @@
         </section>
     </main>
 
-    <!-- Lábléc -->
-    <footer class="footer">
+    <!-- Lábléc (ID-val ellátva, hogy ide ugorjon a Közösség gomb) -->
+    <footer class="footer" id="kozosseg">
         <div class="footer-socials">
             <a href="https://discord.gg/QNmkbCxYd" target="_blank" class="footer-icon discord-icon"><i class="fa-brands fa-discord"></i></a>
             <a href="#" class="footer-icon tiktok-icon"><i class="fa-brands fa-tiktok"></i></a>
